@@ -1,0 +1,10 @@
+# vim files
+*~
+*.swp
+*.swo
+
+# compiled stuff
+*.d
+*.so
+*.o
+*.pyc

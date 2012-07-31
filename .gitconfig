@@ -1,0 +1,34 @@
+[user]
+	name = Ankur Dahiya
+	email = legalos.lotr@gmail.com
+[github]
+	user = legalosLOTR
+	token = b23c00459f5c370c711650b396829d6b
+[core]
+	excludesfile = /home/ankur/.gitignore
+[alias]
+	st = status
+	di = diff
+    ci = commit
+    co = checkout
+    ca = commit -a
+	; an alias for listing your aliases
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
+	; fetch from all remotes, prune deleted remote references, include tags
+	; this will also recurse down into submodules if there are any
+	fullfetch = fetch --all --prune --tags --recurse-submodules --progress
+
+	; cleanup untracked files and undo uncommitted changes
+	cleanup = !git clean -dfx
+
+	; append additional changes to the previous commit
+	fixup = commit --amend --reuse-message HEAD
+
+	; reset staging area
+	unstage = reset HEAD
+
+	; list all untracked files
+	untracked = ls-files --others
+
+	plog = "!git log --graph --pretty=format:'%Cred%h%Creset %an: %s - %Creset %C(yellow)%d%Creset %Cgreen(%cr)%Creset' --abbrev-commit --date=relative | nl | less -R"
